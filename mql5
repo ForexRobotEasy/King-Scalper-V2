@@ -1,0 +1,61 @@
+
+//+------------------------------------------------------------------+
+//|                               King Scalper V2                    |
+//|                                                                  |
+//|                    Developer: Forex Robot Easy Team              |
+//|                    Developer's site: forexroboteasy.com          |
+//+------------------------------------------------------------------+
+
+// Trading Function: EA Option
+// Calculate lot size, max lot, and auto mode balance
+double CalculateLotSize(double balance, double riskPercentage)
+{
+    double lotSize = NormalizeDouble((balance * riskPercentage) / 10000, Digits);
+
+    double maxLot = NormalizeDouble(balance / 10000, Digits);
+
+    double autoModeBalance = NormalizeDouble(balance * 0.1, Digits);
+
+    return lotSize;
+}
+
+// MM Zone A: Optimizing Trades with Balance Percentage
+void SetTakeProfit(double takeProfit)
+{
+    // Set take profit for buy and sell orders
+    // ...
+}
+
+void CloseAllTradesByPercentage(double balancePercentage)
+{
+    // Close all trades based on a specific percentage of the user's balance
+    // ...
+}
+
+// MM Zone B: Trade Management with Set Amounts
+void TradeManagementWithSetAmount(double amount)
+{
+    // Manage trades using the specified amount
+    // ...
+}
+
+// Main function
+int OnInit()
+{
+    // Initialize the King Scalper V2 EA
+    // ...
+    
+    return(INIT_SUCCEEDED);
+}
+
+void OnTick()
+{
+    // Perform trading operations based on the developed functions
+    // ...
+}
+
+void OnDeinit(const int reason)
+{
+    // Deinitialize the King Scalper V2 EA
+    // ...
+}
